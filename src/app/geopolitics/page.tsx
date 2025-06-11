@@ -1,7 +1,7 @@
 // src/app/geopolitics/page.tsx
 
-import { getArticles } from "@/lib/data";
-import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
+import { getArticles } from "../lib/data";
+import { ArticleCard } from "../components/ArticleCard/ArticleCard";
 import styles from './page.module.css'; // We will create this file next
 
 export default function GeopoliticsPage() {
