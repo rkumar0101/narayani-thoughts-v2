@@ -7,7 +7,7 @@ export default function AboutPage() {
       <h1 className={styles.title}>About Narayani Thoughts</h1>
       <div className={styles.content}>
         <p>
-          In an age of endless noise, Narayani Thoughts stands apart—a platform built on facts, guided by values, and dedicated to reshaping India's narrative.
+          In an age of endless noise, Narayani Thoughts stands apart—a platform built on facts, guided by values, and dedicated to reshaping Bharats narrative.
         </p>
         <h2 className={styles.subtitle}>Our Mission</h2>
         <p>
