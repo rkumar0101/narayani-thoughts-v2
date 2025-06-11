@@ -1,0 +1,9 @@
+/* src/components/Footer/Footer.module.css */
+
+.footer {
+  background-color: #1A2A4A; /* Our 'primary' brand color */
+  color: #A0AEC0; /* A lighter gray for footer text */
+  padding: 2rem;
+  margin-top: auto; /* This helps push the footer to the bottom */
+  text-align: center;
+}
