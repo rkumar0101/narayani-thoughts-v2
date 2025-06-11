@@ -6,10 +6,10 @@ import styles from './Header.module.css';
 // Define our navigation links in an array for easy management
 const navLinks = [
   { name: 'Geopolitics', href: '/geopolitics' },
-  { name: 'Politics', href: '#' },
-  { name: 'Science', href: '#' },
-  { name: 'Society', href: '#' },
-  { name: 'Vision', href: '#' },
+  { name: 'Politics', href: '/politics' },
+  { name: 'Science', href: '/science' },
+  { name: 'Society', href: '/society' },
+  { name: 'Vision', href: '/vision' },
 ];
 
 const Header = () => {
