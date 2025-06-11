@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 
 // Define our navigation links in an array for easy management
 const navLinks = [
-  { name: 'Geopolitics', href: '#' },
+  { name: 'Geopolitics', href: '/geopolitics' },
   { name: 'Politics', href: '#' },
   { name: 'Science', href: '#' },
   { name: 'Society', href: '#' },
