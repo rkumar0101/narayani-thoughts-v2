@@ -8,19 +8,26 @@ export default function Home() {
   const articles = getArticles();
 
   return (
-    <div className={styles.container}>
-      <div className={styles.hero}>
-        <h1 className={styles.title}>Narayani Thoughts</h1>
-        <p className={styles.subtitle}>
-          A Voice Born of Vision, Grounded in Truth.
-        </p>
-      </div>
+    <>
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.title}>Narayani Thoughts</h1>
+          <p className={styles.subtitle}>
+            A Voice Born of Vision, Grounded in Truth.
+          </p>
+        </div>
+      </section>
 
-      <div className={styles.articleGrid}>
-        {articles.map((article) => (
-          <ArticleCard key={article.id} article={article} />
-        ))}
+      <div className={styles.pageContainer}>
+        <section className={styles.articlesSection}>
+          <h2 className={styles.sectionTitle}>Latest Articles</h2>
+          <div className={styles.articleGrid}>
+            {articles.map((article) => (
+              <ArticleCard key={article.id} article={article} />
+            ))}
+          </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 }

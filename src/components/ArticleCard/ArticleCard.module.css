@@ -1,36 +1,73 @@
 /* src/components/ArticleCard/ArticleCard.module.css */
 
 .card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0; /* Our 'border' color */
+  background-color: var(--color-foreground);
   border-radius: 0.5rem;
-  padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-  text-decoration: none;
-  color: inherit;
-  display: block;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden; /* Important for the image border-radius */
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* This creates a 16:9 Aspect Ratio container */
+}
+
+.image {
+  object-fit: cover; /* This makes the image cover the container without stretching */
+}
+
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background-color: #FEF3C7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-family: var(--font-source-sans);
+  margin-bottom: 0.75rem;
+  align-self: flex-start;
 }
 
 .title {
   font-size: 1.25rem;
-  font-weight: 600;
-  color: #1A2A4A; /* Our 'primary' color */
+  font-weight: 700;
+  line-height: 1.3;
   margin-bottom: 0.5rem;
 }
 
 .excerpt {
-  color: #4A5568; /* Our 'secondary' color */
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
   margin-bottom: 1rem;
+  flex-grow: 1;
 }
 
-.category {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #D97706; /* Our 'accent' color */
+.readMore {
+  font-family: var(--font-source-sans);
+  font-weight: 600;
+  color: var(--color-accent);
+  align-self: flex-end;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .readMore {
+  transform: translateX(4px);
 }

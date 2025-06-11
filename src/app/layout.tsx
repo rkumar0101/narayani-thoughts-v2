@@ -1,14 +1,24 @@
 // src/app/layout.tsx
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Merriweather, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-// Import components
 import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer"; // Import the Footer
+import Footer from "@/components/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ['400', '600', '700'],
+  variable: '--font-source-sans',
+});
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-merriweather',
+});
 
 export const metadata: Metadata = {
   title: "Narayani Thoughts",
@@ -22,11 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${sourceSans.variable} ${merriweather.variable}`}>
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Header />
           <main style={{ flex: 1 }}>{children}</main>
-          <Footer /> {/* Our new Footer is here! */}
+          <Footer />
         </div>
       </body>
     </html>

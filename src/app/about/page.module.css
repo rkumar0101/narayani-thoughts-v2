@@ -1,0 +1,39 @@
+/* src/app/about/page.module.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #1A2A4A;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2D3748;
+}
+
+.subtitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1A2A4A;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 0.5rem;
+}
+
+.content ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}

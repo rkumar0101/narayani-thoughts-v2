@@ -1,4 +1,13 @@
-/* src/app/articles/[id]/page.module.css */
+/* In src/app/articles/[id]/page.module.css */
+
+.meta {
+  font-family: var(--font-source-sans), sans-serif; /* Add this line */
+  font-size: 1rem;
+  color: #4A5568;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 1.5rem;
+}
 
 .article {
   max-width: 800px;
