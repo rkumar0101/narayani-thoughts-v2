@@ -3,7 +3,15 @@
 import { getArticles } from "@/lib/data";
 import styles from './page.module.css';
 
-export default function ArticlePage({ params }: { params: { id: string } }) {
+// Define a specific type for the props this page will receive
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
+// Use the new 'Props' type for the function's arguments
+export default function ArticlePage({ params }: Props) {
   const articles = getArticles();
   const article = articles.find((article) => article.id === params.id);
 
@@ -24,7 +32,6 @@ export default function ArticlePage({ params }: { params: { id: string } }) {
         </p>
       </header>
       <div className={styles.content}>
-        {/* In a real app, this would be rendered from Markdown or HTML */}
         <p>{article.content}</p>
       </div>
     </article>
