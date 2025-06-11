@@ -1,0 +1,36 @@
+/* src/components/ArticleCard/ArticleCard.module.css */
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0; /* Our 'border' color */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1A2A4A; /* Our 'primary' color */
+  margin-bottom: 0.5rem;
+}
+
+.excerpt {
+  color: #4A5568; /* Our 'secondary' color */
+  margin-bottom: 1rem;
+}
+
+.category {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #D97706; /* Our 'accent' color */
+}

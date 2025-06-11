@@ -1,8 +1,26 @@
+// src/app/science/page.tsx
+
+import { getArticles } from "@/lib/data";
+import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
+import styles from './page.module.css';
+
 export default function SciencePage() {
+  const allArticles = getArticles();
+
+  // Filter for the 'Science' category
+  const scienceArticles = allArticles.filter(
+    (article) => article.category === 'Science'
+  );
+
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Science & Innovation</h1>
-      <p>This is the page for Science. Articles and analysis will be listed here.</p>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Science & Innovation</h1>
+
+      <div className={styles.articleGrid}>
+        {scienceArticles.map((article) => (
+          <ArticleCard key={article.id} article={article} />
+        ))}
+      </div>
     </div>
   );
 }

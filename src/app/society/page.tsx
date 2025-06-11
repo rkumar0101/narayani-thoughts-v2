@@ -1,8 +1,26 @@
+// src/app/society/page.tsx
+
+import { getArticles } from "@/lib/data";
+import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
+import styles from './page.module.css';
+
 export default function SocietyPage() {
+  const allArticles = getArticles();
+
+  // Filter for the 'Society' category
+  const societyArticles = allArticles.filter(
+    (article) => article.category === 'Society'
+  );
+
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Crime & Society</h1>
-      <p>This is the page for Society. Articles and analysis will be listed here.</p>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Crime & Society</h1>
+
+      <div className={styles.articleGrid}>
+        {societyArticles.map((article) => (
+          <ArticleCard key={article.id} article={article} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,33 @@
+/* src/app/articles/[id]/page.module.css */
+
+.article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #1A2A4A;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.meta {
+  font-size: 1rem;
+  color: #4A5568;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 1.5rem;
+}
+
+.author {
+  font-weight: 500;
+}
+
+.content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2D3748;
+}

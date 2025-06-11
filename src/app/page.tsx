@@ -1,22 +1,26 @@
 // src/app/page.tsx
 
+import { getArticles } from "@/lib/data";
+import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
 import styles from './page.module.css';
 
 export default function Home() {
+  const articles = getArticles();
+
   return (
-    // Note: The <main> tag was removed from here because
-    // we added it to the main layout.tsx file.
-    // We only need the specific content for this page.
-    <>
-      <h1 className={styles.title}>
-        Narayani Thoughts
-      </h1>
-      <p className={styles.subtitle}>
-        A Voice Born of Vision, Grounded in Truth.
-      </p>
-      <button className={styles.button}>
-        Read the Vision
-      </button>
-    </>
+    <div className={styles.container}>
+      <div className={styles.hero}>
+        <h1 className={styles.title}>Narayani Thoughts</h1>
+        <p className={styles.subtitle}>
+          A Voice Born of Vision, Grounded in Truth.
+        </p>
+      </div>
+
+      <div className={styles.articleGrid}>
+        {articles.map((article) => (
+          <ArticleCard key={article.id} article={article} />
+        ))}
+      </div>
+    </div>
   );
 }
