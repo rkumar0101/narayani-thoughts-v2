@@ -1,7 +1,7 @@
 // src/app/science/page.tsx
 
-import { getArticles } from "../lib/data";
-import { ArticleCard } from "../components/ArticleCard/ArticleCard";
+import { getArticles } from "@/lib/data";
+import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
 import styles from './page.module.css';
 
 export default function SciencePage() {

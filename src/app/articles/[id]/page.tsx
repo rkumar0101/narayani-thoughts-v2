@@ -1,6 +1,6 @@
 // src/app/articles/[id]/page.tsx
 
-import { getArticles } from "../lib/data";
+import { getArticles } from "@/lib/data";
 import styles from './page.module.css';
 
 export default function ArticlePage({ params }: { params: { id: string } }) {
