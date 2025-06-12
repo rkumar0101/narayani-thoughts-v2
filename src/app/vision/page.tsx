@@ -4,8 +4,8 @@ import { getArticles } from "@/lib/data";
 import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
 import styles from './page.module.css';
 
-export default function VisionPage() {
-  const allArticles = getArticles();
+export default async function VisionPage() {
+  const allArticles = await getArticles();
 
   // Filter for the 'Vision' category (this will be empty for now)
   const visionArticles = allArticles.filter(

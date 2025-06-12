@@ -4,8 +4,8 @@ import { getArticles } from "@/lib/data";
 import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
 import styles from './page.module.css'; // We will create this file next
 
-export default function GeopoliticsPage() {
-  const allArticles = getArticles();
+export default async function GeopoliticsPage() {
+  const allArticles = await getArticles();
 
   // Filter the articles to get only the ones in the 'Geopolitics' category
   const geopoliticsArticles = allArticles.filter(

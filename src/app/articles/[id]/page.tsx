@@ -1,28 +1,17 @@
 // src/app/articles/[id]/page.tsx
 
-import { getArticles } from "@/lib/data";
+import { getArticleById } from "@/lib/data"; // Import the new function
 import styles from './page.module.css';
 
-// This new function tells Next.js which article pages to build
-export async function generateStaticParams() {
-  const articles = getArticles();
-
-  return articles.map((article) => ({
-    id: article.id,
-  }));
-}
-
-// Type definition for the page's props
 type Props = {
   params: {
     id: string;
   };
 };
 
-// The page component
-export default function ArticlePage({ params }: Props) {
-  const articles = getArticles();
-  const article = articles.find((article) => article.id === params.id);
+export default async function ArticlePage({ params }: Props) {
+  // Use the new function to get just one article
+  const article = await getArticleById(params.id);
 
   if (!article) {
     return (

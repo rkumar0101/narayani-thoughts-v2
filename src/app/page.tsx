@@ -4,8 +4,10 @@ import { getArticles } from "@/lib/data";
 import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
 import styles from './page.module.css';
 
-export default function Home() {
-  const articles = getArticles();
+// Add the 'async' keyword here
+export default async function Home() {
+  // Add the 'await' keyword here
+  const articles = await getArticles();
 
   return (
     <>

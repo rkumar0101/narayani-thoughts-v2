@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Merriweather, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/components/Header/header";
+import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 const sourceSans = Source_Sans_3({

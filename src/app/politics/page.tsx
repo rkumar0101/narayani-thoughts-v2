@@ -4,8 +4,8 @@ import { getArticles } from "@/lib/data";
 import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
 import styles from './page.module.css'; // We will create this file next
 
-export default function PoliticsPage() {
-  const allArticles = getArticles();
+export default async function PoliticsPage() {
+  const allArticles = await getArticles();
 
   // Filter for the 'Politics' category
   const politicsArticles = allArticles.filter(

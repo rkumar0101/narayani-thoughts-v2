@@ -4,8 +4,8 @@ import { getArticles } from "@/lib/data";
 import { ArticleCard } from "@/components/ArticleCard/ArticleCard";
 import styles from './page.module.css';
 
-export default function SocietyPage() {
-  const allArticles = getArticles();
+export default async function SocietyPage() {
+  const allArticles = await getArticles();
 
   // Filter for the 'Society' category
   const societyArticles = allArticles.filter(
