@@ -1,5 +1,5 @@
 // src/components/Header/Header.tsx (Corrected Code)
-
+// Forcing a change for Git to see
 "use client";
 
 import Link from 'next/link';
