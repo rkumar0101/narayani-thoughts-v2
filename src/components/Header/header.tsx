@@ -1,4 +1,5 @@
-// src/components/Header/Header.tsx
+// src/components/Header/Header.tsx (Corrected Code)
+
 "use client";
 
 import Link from 'next/link';
@@ -13,9 +14,10 @@ const categoryLinks = [
   { name: 'Vision', href: '/vision' },
 ];
 
+// vvv THIS ARRAY IS NOW CORRECT vvv
 const otherLinks = [
   { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' }, // <-- Add this line
+  { name: 'Contact', href: '/contact' },
 ];
 
 const Header = () => {
