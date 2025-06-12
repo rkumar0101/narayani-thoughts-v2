@@ -14,7 +14,8 @@ const categoryLinks = [
 ];
 
 const otherLinks = [
-    { name: 'About', href: '/about' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' }, // <-- Add this line
 ];
 
 const Header = () => {
