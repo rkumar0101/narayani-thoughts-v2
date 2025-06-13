@@ -1,20 +1,20 @@
-// components/ContactForm.js
+// src/components/ContactForm.tsx
+
 'use client';
 
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 
 export default function ContactForm() {
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState<string>('');
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const form = event.target;
+    const form = event.target as HTMLFormElement;
     const data = new FormData(form);
 
     try {
-      // The fetch request with the corrected syntax
-      const response = await fetch('https://formspree.io/f/xvgraqqk', { // I've used the URL from your screenshot
+      const response = await fetch('https://formspree.io/f/xvgraqqk', {
         method: 'POST',
         body: data,
         headers: {
@@ -84,7 +84,7 @@ export default function ContactForm() {
         <textarea
           name="message"
           id="message"
-          rows="4"
+          rows={4}
           required
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         ></textarea>
